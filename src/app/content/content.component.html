@@ -3,8 +3,8 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Page Header
-      <small>Optional description</small>
+      {{title}}
+      <small>{{desc}}</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -14,8 +14,7 @@
 
   <!-- Main content -->
   <section class="content container-fluid">
-
-    <app-stock-manager></app-stock-manager>
+  <router-outlet></router-outlet>
   </section>
   <!-- /.content -->
 </div>
