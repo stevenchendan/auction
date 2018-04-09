@@ -8,7 +8,6 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./stock-form.component.css']
 })
 export class StockFormComponent implements OnInit {
-
   public stock: Stock;
   constructor(
     private routeInfo: ActivatedRoute,

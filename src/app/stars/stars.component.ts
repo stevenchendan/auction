@@ -6,15 +6,23 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./stars.component.css']
 })
 export class StarsComponent implements OnInit {
-  @Input() rating: number;
+  @Input() rating = 0;
   stars: boolean[];
 
+  @Input() readonly = true;
   constructor() { }
 
   ngOnInit() {
     this.stars = [];
     for (let i = 1; i <= 5; i++) {
       this.stars.push(i > this.rating);
+    }
+  }
+
+  clickStar(index) {
+    if (!this.readonly) {
+      console.log('index', index);
+      this.rating = index + 1;
     }
   }
 
